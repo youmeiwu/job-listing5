@@ -8,11 +8,16 @@
     <%= link_to("Edit", edit_admin_job_path(job)) %>
     |
     <%= link_to("Destroy", admin_job_path(job), method: :delete) %>
+    |
     <% if job.is_hidden %>
-      <%= link_to("Public", publish_admin_job_path(job), method: :post, class: "btn btn-default btn-xs") %>
-    <% else %>
-      <%= link_to("Hide", hide_admin_job_path(job), method: :post, class: "btn btn-default btn-xs") %>
+      <%= link_to(publish_admin_job_path(job), method: :post) do %>
+        <i class="fa fa-eye"></i>
       <% end %>
+    <% else %>
+      <%= link_to(hide_admin_job_path(job), method: :post) do %>
+        <i class="fa fa-eye-slash"></i>
+      <% end %>
+    <% end %>
   </td>
   <td><%= job.created_at %></td>
 
