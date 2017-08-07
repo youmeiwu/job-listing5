@@ -2,6 +2,17 @@
   <%= link_to("Add Job", new_job_path, class: "btn btn-default") %>
 </div>
 
+<div class="dropdown clearfix pull-right">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">排序
+    <b class="caret"></b>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <li><%= link_to("按照薪资下限排序", jobs_path(:order => "by_lower_bound")) %></li>
+    <li><%= link_to("按照薪资上限排序", jobs_path(:order => "by_upper_bound")) %></li>
+    <li><%= link_to("按照发布时间排序", jobs_path) %></li>
+  </ul>
+</div>
+
 <br><br>
 
 <div class="col-md-12">
@@ -9,7 +20,8 @@
   <thead>
     <tr>
       <th>职位</th>
-      <th>管理选项</th>
+      <th>薪资下限</th>
+      <th>薪资上限</th>
       <th>发布时间</th>
     </tr>
   </thead>
