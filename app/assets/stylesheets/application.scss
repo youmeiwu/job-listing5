@@ -18,3 +18,37 @@
  @import 'bootstrap';
  @import 'font-awesome-sprockets';
  @import 'font-awesome';
+
+.jumbotron {
+  text-align: center;
+  padding: 110px;
+  margin-bottom: 50px;
+}
+
+.title {
+  margin-bottom: 50px;
+}
+
+.jumbotron p {
+  margin-bottom: 50px;
+}
+
+.panel-default {
+  border: 1px dotted;
+  margin-bottom: 50px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.panel-body {
+  padding: 200px 0px;
+}
+
+.thumbnail {
+  border: 0 none;
+}
+
+.caption {
+  margin: 30px;
+  text-align :center;
+}
